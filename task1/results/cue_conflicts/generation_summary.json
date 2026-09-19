@@ -1,0 +1,11 @@
+{
+  "generated": 240,
+  "auto_accepted": 231,
+  "auto_rejected": 9,
+  "rule": {
+    "edge_corr_min": 0.25,
+    "style_gain_min": 0.5,
+    "min_pixel_std": 0.05,
+    "alpha": 1.0
+  }
+}

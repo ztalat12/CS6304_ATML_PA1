@@ -1,0 +1,22 @@
+{
+  "best_mean_macro_f1": 93.87918129975394,
+  "epochs_run": 15,
+  "steps_per_epoch": 202,
+  "config": {
+    "seed": 6304,
+    "data_root": "/content/data/PACS",
+    "results_dir": "task2/results/runs",
+    "num_workers": 2,
+    "per_domain_batch": 8,
+    "target_batch": 24,
+    "lr": 0.0001,
+    "weight_decay": 0.0001,
+    "grad_clip": 1.0,
+    "max_epochs": 30,
+    "patience": 5,
+    "run_name": "source_only",
+    "method": {
+      "name": "source_only"
+    }
+  }
+}

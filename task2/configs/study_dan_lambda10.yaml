@@ -1,0 +1,4 @@
+base: dan.yaml
+run_name: dan_lambda10
+method:
+  lambda_mmd: 10.0

@@ -1,0 +1,55 @@
+# ---------------------------------------------------------------------------
+# Task 1 configuration. Everything that affects a reported number lives here.
+# Items marked [DESIGN CHOICE] are yours to decide -- state a hypothesis and a
+# metric for each in the report BEFORE looking at the results.
+# ---------------------------------------------------------------------------
+seed: 6304
+dataset: stl10                    # [DESIGN CHOICE] STL-10 (recommended) vs Oxford-IIIT Pets
+data_root: data/stl10
+image_size: 224                   # common RGB canvas all interventions are applied on
+subset_size: 500                  # class-balanced official-test subset (50 / class)
+batch_size: 64                    # feature-extraction batch size (no effect on results)
+results_dir: task1/results
+splits_dir: task1/data/splits
+
+head:                             # linear probe on frozen features (fixed by the handout)
+  lr: 1.0e-3
+  weight_decay: 1.0e-4
+  max_epochs: 50
+  patience: 5                     # early stopping on validation accuracy
+  batch_size: 256
+
+zero_shot_template: "a photo of a {}."   # fixed prompt; no prompt search
+
+color:
+  extra: hue_rotation             # [DESIGN CHOICE] hue_rotation | palette_transfer | class_swap
+  hue_factor: 0.5                 # 0.5 == 180 degree rotation on torchvision's [-0.5, 0.5] scale
+
+translation:
+  deltas: [0, 8, 16, 32]          # pixels; averaged over the four cardinal directions
+
+patch_shuffle:
+  grid: 4                         # 4x4 grid -> 56x56 px patches on a 224 canvas
+
+cue_conflict:
+  # [DESIGN CHOICE] five unordered pairs covering every STL-10 class exactly once.
+  # Four animal/vehicle pairs give very different shape AND texture; bird/monkey
+  # (feathers vs fur) is a harder animal/animal pair that tests texture subtlety.
+  pairs: [[cat, car], [dog, truck], [horse, ship], [deer, airplane], [bird, monkey]]
+  per_direction: 24               # 5 pairs x 2 directions x 24 = 240 candidates (>= 200 after rejection)
+  alpha: 1.0                      # [DESIGN CHOICE] AdaIN style strength (1.0 = full stylisation)
+  vgg: third_party/adain/vgg_normalised.pth
+  decoder: third_party/adain/decoder.pth
+  # Pre-registered, model-free automatic rejection rule (see make_cue_conflicts.py).
+  edge_corr_min: 0.25             # content outline must survive
+  style_gain_min: 0.50            # style statistics must actually move toward the style image
+  min_pixel_std: 0.05             # reject flat / washed-out outputs
+  balance: true                   # trim accepted set to equal count per (pair, direction) if still >= 200
+
+tsne:                             # [DESIGN CHOICE] visualisation settings (report them)
+  perplexity: 30
+  metric: cosine                  # all three representations are compared by cosine elsewhere
+  init: pca
+  translation_delta: 32            # which single translation is drawn (must be in translation.deltas)
+  translation_direction: right     # right | left | up | down
+  per_intervention_grid: true      # also save the optional one-fit-per-intervention grid

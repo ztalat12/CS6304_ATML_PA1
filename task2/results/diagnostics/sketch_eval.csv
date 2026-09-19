@@ -1,0 +1,6 @@
+run,src_val_acc,sketch_acc,sketch_f1,separability,n_classes_predicted,dog,elephant,giraffe,guitar,horse,house,person
+cdan_confusion,93.73,19.55,5.3,100.0,2,0.0,0.0,100.0,2.5,0.0,0.0,0.0
+dann_confusion,93.57,5.09,2.68,99.73,5,0.1,0.0,3.9,1.5,0.1,0.0,100.0
+dann_flip,92.91,5.37,3.34,100.0,3,0.0,0.0,0.0,8.2,0.1,0.0,100.0
+dann_l2norm,92.99,23.42,9.16,100.0,2,0.0,0.0,0.0,17.1,100.0,0.0,0.0
+dann_sgd,86.4,55.89,53.17,100.0,7,12.0,93.1,60.6,81.6,36.5,98.8,53.1

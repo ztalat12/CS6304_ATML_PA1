@@ -1,0 +1,6 @@
+# DIAGNOSTIC (not the handout's DANN): everything as in dann.yaml, but the discriminator's input
+# is L2-normalised. Tests whether the divergence is a FEATURE-SCALE runaway.
+base: dann.yaml
+run_name: dann_l2norm
+method:
+  disc_input_norm: l2

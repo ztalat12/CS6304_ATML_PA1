@@ -1,0 +1,17 @@
+{
+  "method": "t-SNE (scikit-learn)",
+  "perplexity": 30,
+  "metric": "cosine",
+  "init": "pca",
+  "learning_rate": "auto",
+  "seed": 6304,
+  "translation_shown": "right 32px",
+  "points_per_condition": {
+    "clean": 500,
+    "grayscale": 500,
+    "translation 32px": 500,
+    "patch shuffle": 500,
+    "cue conflict": 220
+  },
+  "cue_conflict_colour": "content (shape) class"
+}

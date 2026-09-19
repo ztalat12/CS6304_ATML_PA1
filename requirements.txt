@@ -1,0 +1,14 @@
+# Written against torch 2.4 / torchvision 0.19 / open_clip 3.x. Newer versions should work.
+torch>=2.1
+torchvision>=0.16
+open_clip_torch>=2.24
+numpy
+scipy
+pandas
+scikit-learn>=1.2
+matplotlib
+pyyaml
+pillow
+tqdm
+gdown            # only for downloading PACS (Google Drive)
+umap-learn       # optional: only if you switch Task 1 visualisation to UMAP

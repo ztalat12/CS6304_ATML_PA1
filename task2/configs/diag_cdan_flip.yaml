@@ -1,0 +1,5 @@
+# DIAGNOSTIC: CDAN with the non-saturating flipped-label loss (see diag_dann_flip.yaml).
+base: cdan.yaml
+run_name: cdan_flip
+method:
+  adv_loss: flip

@@ -1,0 +1,7 @@
+base: base.yaml
+run_name: dann
+method:
+  name: dann
+  max_alpha: 1.0
+  hidden: 256
+  dropout: 0.5

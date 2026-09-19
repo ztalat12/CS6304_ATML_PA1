@@ -1,0 +1,7 @@
+base: base.yaml
+run_name: cdan
+method:
+  name: cdan
+  max_alpha: 1.0
+  hidden: 256
+  dropout: 0.5

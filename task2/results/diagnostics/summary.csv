@@ -1,0 +1,6 @@
+run,epochs,best_epoch,best_src_val_f1,last_src_val_f1,min_loss_cls,final_loss_cls,final_loss_dom,final_disc_acc,feat_norm_first,feat_norm_last,max_grad_norm,verdict
+dann_flip,16,11,93.22,91.64,0.095,0.095,0.948,0.324,54.42,1193.82,43.73,STABLE
+dann_l2norm,13,8,93.69,92.51,0.063,0.063,0.721,0.342,50.54,368.1,13.28,STABLE
+dann_sgd,7,2,86.75,64.85,0.401,1.315,3.126,0.457,30.7,1249.93,300.1,"DEGRADED (learned, then diverged)"
+dann_confusion,11,6,93.73,91.37,0.06,0.07,0.574,0.695,39.13,102.9,14.02,STABLE
+cdan_confusion,9,4,93.87,93.09,0.242,0.242,0.548,0.714,35.19,21.69,11.84,STABLE

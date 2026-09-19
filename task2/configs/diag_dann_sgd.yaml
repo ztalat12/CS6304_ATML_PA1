@@ -1,0 +1,9 @@
+# DIAGNOSTIC: the handout's DANN exactly, but trained with SGD + momentum and Ganin's annealed
+# learning rate instead of AdamW. Tests whether the divergence is an interaction with Adam's
+# per-parameter normalisation (which makes alpha and gradient clipping nearly inert).
+base: dann.yaml
+run_name: dann_sgd
+optimizer: sgd
+lr: 1.0e-3
+sgd_momentum: 0.9
+lr_schedule: ganin

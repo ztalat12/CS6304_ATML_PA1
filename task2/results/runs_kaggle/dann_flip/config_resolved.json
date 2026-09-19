@@ -1,0 +1,21 @@
+{
+  "seed": 6304,
+  "data_root": "/kaggle/input/datasets/zylah628/pacs-dataset/PACS",
+  "results_dir": "task2/results/runs_kaggle",
+  "num_workers": 2,
+  "per_domain_batch": 8,
+  "target_batch": 24,
+  "lr": 0.0001,
+  "weight_decay": 0.0001,
+  "grad_clip": 1.0,
+  "max_epochs": 30,
+  "patience": 5,
+  "run_name": "dann_flip",
+  "method": {
+    "name": "dann",
+    "max_alpha": 1.0,
+    "hidden": 256,
+    "dropout": 0.5,
+    "adv_loss": "flip"
+  }
+}

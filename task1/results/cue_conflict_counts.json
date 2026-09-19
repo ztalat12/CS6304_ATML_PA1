@@ -1,0 +1,19 @@
+{
+  "generated": 240,
+  "accepted_before_balance": 231,
+  "rejected": 9,
+  "used": 220,
+  "balanced": true,
+  "per_cell_used": {
+    "bird-monkey|bird->monkey": 22,
+    "bird-monkey|monkey->bird": 22,
+    "cat-car|car->cat": 22,
+    "cat-car|cat->car": 22,
+    "deer-airplane|airplane->deer": 22,
+    "deer-airplane|deer->airplane": 22,
+    "dog-truck|dog->truck": 22,
+    "dog-truck|truck->dog": 22,
+    "horse-ship|horse->ship": 22,
+    "horse-ship|ship->horse": 22
+  }
+}

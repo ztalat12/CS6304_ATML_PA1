@@ -1,0 +1,7 @@
+# DIAGNOSTIC: everything as in dann.yaml, but the backbone minimises the non-saturating flipped-label
+# loss instead of maximising the domain loss through the GRL. Tests whether the divergence comes from
+# maximising an objective that is unbounded above.
+base: dann.yaml
+run_name: dann_flip
+method:
+  adv_loss: flip

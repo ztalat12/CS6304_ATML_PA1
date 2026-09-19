@@ -1,0 +1,256 @@
+{
+  "source_only_confusions": {
+    "dog": [
+      {
+        "pred": "elephant",
+        "count": 272,
+        "share_%": 35.233160621761655
+      },
+      {
+        "pred": "horse",
+        "count": 253,
+        "share_%": 32.7720207253886
+      },
+      {
+        "pred": "person",
+        "count": 104,
+        "share_%": 13.471502590673575
+      }
+    ],
+    "elephant": [
+      {
+        "pred": "person",
+        "count": 55,
+        "share_%": 7.4324324324324325
+      },
+      {
+        "pred": "horse",
+        "count": 41,
+        "share_%": 5.54054054054054
+      },
+      {
+        "pred": "giraffe",
+        "count": 6,
+        "share_%": 0.8108108108108109
+      }
+    ],
+    "giraffe": [
+      {
+        "pred": "horse",
+        "count": 164,
+        "share_%": 21.779548472775563
+      },
+      {
+        "pred": "elephant",
+        "count": 54,
+        "share_%": 7.171314741035856
+      },
+      {
+        "pred": "person",
+        "count": 31,
+        "share_%": 4.116865869853918
+      }
+    ],
+    "guitar": [
+      {
+        "pred": "elephant",
+        "count": 83,
+        "share_%": 13.651315789473685
+      },
+      {
+        "pred": "giraffe",
+        "count": 23,
+        "share_%": 3.7828947368421053
+      },
+      {
+        "pred": "person",
+        "count": 7,
+        "share_%": 1.1513157894736843
+      }
+    ],
+    "horse": [
+      {
+        "pred": "elephant",
+        "count": 64,
+        "share_%": 7.8431372549019605
+      },
+      {
+        "pred": "giraffe",
+        "count": 53,
+        "share_%": 6.495098039215686
+      },
+      {
+        "pred": "person",
+        "count": 20,
+        "share_%": 2.450980392156863
+      }
+    ],
+    "house": [
+      {
+        "pred": "person",
+        "count": 2,
+        "share_%": 2.5
+      },
+      {
+        "pred": "elephant",
+        "count": 1,
+        "share_%": 1.25
+      }
+    ],
+    "person": [
+      {
+        "pred": "elephant",
+        "count": 15,
+        "share_%": 9.375
+      },
+      {
+        "pred": "giraffe",
+        "count": 8,
+        "share_%": 5.0
+      },
+      {
+        "pred": "house",
+        "count": 1,
+        "share_%": 0.625
+      }
+    ]
+  },
+  "source_only_weakest_class": "dog",
+  "dan": {
+    "largest_gain": {
+      "class": "dog",
+      "delta_pp": 24.093264248704664,
+      "confusions": [
+        {
+          "pred": "person",
+          "count": 326,
+          "share_%": 42.2279792746114
+        },
+        {
+          "pred": "house",
+          "count": 81,
+          "share_%": 10.492227979274611
+        },
+        {
+          "pred": "elephant",
+          "count": 46,
+          "share_%": 5.958549222797927
+        }
+      ]
+    },
+    "largest_drop": {
+      "class": "person",
+      "delta_pp": -79.375,
+      "confusions_after": [
+        {
+          "pred": "house",
+          "count": 152,
+          "share_%": 95.0
+        }
+      ],
+      "confusions_before": [
+        {
+          "pred": "elephant",
+          "count": 15,
+          "share_%": 9.375
+        },
+        {
+          "pred": "giraffe",
+          "count": 8,
+          "share_%": 5.0
+        },
+        {
+          "pred": "house",
+          "count": 1,
+          "share_%": 0.625
+        }
+      ]
+    }
+  },
+  "dann": {
+    "largest_gain": {
+      "class": "elephant",
+      "delta_pp": 13.243243243243242,
+      "confusions": [
+        {
+          "pred": "house",
+          "count": 3,
+          "share_%": 0.40540540540540543
+        },
+        {
+          "pred": "person",
+          "count": 2,
+          "share_%": 0.2702702702702703
+        }
+      ]
+    },
+    "largest_drop": {
+      "class": "horse",
+      "delta_pp": -60.049019607843135,
+      "confusions_after": [
+        {
+          "pred": "elephant",
+          "count": 620,
+          "share_%": 75.98039215686275
+        },
+        {
+          "pred": "person",
+          "count": 17,
+          "share_%": 2.0833333333333335
+        },
+        {
+          "pred": "house",
+          "count": 6,
+          "share_%": 0.7352941176470589
+        }
+      ],
+      "confusions_before": [
+        {
+          "pred": "elephant",
+          "count": 64,
+          "share_%": 7.8431372549019605
+        },
+        {
+          "pred": "giraffe",
+          "count": 53,
+          "share_%": 6.495098039215686
+        },
+        {
+          "pred": "person",
+          "count": 20,
+          "share_%": 2.450980392156863
+        }
+      ]
+    }
+  },
+  "cdan": {
+    "largest_gain": {
+      "class": "person",
+      "delta_pp": 15.625,
+      "confusions": []
+    },
+    "largest_drop": {
+      "class": "house",
+      "delta_pp": -93.75,
+      "confusions_after": [
+        {
+          "pred": "person",
+          "count": 78,
+          "share_%": 97.5
+        }
+      ],
+      "confusions_before": [
+        {
+          "pred": "person",
+          "count": 2,
+          "share_%": 2.5
+        },
+        {
+          "pred": "elephant",
+          "count": 1,
+          "share_%": 1.25
+        }
+      ]
+    }
+  }
+}

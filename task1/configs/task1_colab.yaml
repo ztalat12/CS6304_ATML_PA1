@@ -1,0 +1,8 @@
+# Colab-only config. It INHERITS everything from task1.yaml (via `base:`) and changes one
+# thing: STL-10 lives on Colab's fast local disk instead of in Drive. Your committed
+# task1.yaml stays untouched, with its relative path.
+base: task1.yaml
+data_root: /content/data/stl10
+# Uncomment to skip the optional supplementary t-SNE grid (saves a few minutes):
+# tsne:
+#   per_intervention_grid: false

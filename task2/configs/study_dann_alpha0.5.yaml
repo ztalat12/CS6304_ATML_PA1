@@ -1,0 +1,4 @@
+base: dann.yaml
+run_name: dann_alpha0.5
+method:
+  max_alpha: 0.5

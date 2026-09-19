@@ -1,0 +1,16 @@
+# Shared by EVERY Task 2 (and Task 3) run -- do not change per method.
+seed: 6304
+data_root: data/PACS
+results_dir: task2/results/runs
+num_workers: 2          # must be >= 1 and IDENTICAL for every Task 2 and Task 3 run: each worker has its
+                        # own seeded RNG, so changing this changes the augmentation of every batch.
+                        # 2 matches Google Colab's two CPU cores.
+per_domain_batch: 8     # 8 photo + 8 art + 8 cartoon = 24 source images per update
+target_batch: 24        # equal total source and target batch sizes
+lr: 1.0e-4
+weight_decay: 1.0e-4
+grad_clip: 0.0          # handout protocol: no gradient clipping
+                        # Without it the adversarial methods (DANN/CDAN) diverge: the reversed
+                        # gradient maximises an unbounded domain loss. Report this choice.
+max_epochs: 30
+patience: 5             # early stopping on mean source-validation macro-F1
