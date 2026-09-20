@@ -1,0 +1,24 @@
+{
+  "best_mean_macro_f1": 95.07910722792138,
+  "epochs_run": 16,
+  "steps_per_epoch": 202,
+  "config": {
+    "seed": 6304,
+    "data_root": "/kaggle/input/datasets/talhaimran27/pacs-dataset/PACS",
+    "results_dir": "task3/results/runs",
+    "num_workers": 2,
+    "per_domain_batch": 8,
+    "target_batch": 24,
+    "lr": 0.0001,
+    "weight_decay": 0.0001,
+    "grad_clip": 0.0,
+    "max_epochs": 30,
+    "patience": 5,
+    "erm_checkpoint": "task2/results/runs/source_only/best.pt",
+    "run_name": "sam",
+    "method": {
+      "name": "sam",
+      "rho": 0.05
+    }
+  }
+}

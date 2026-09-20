@@ -1,0 +1,10 @@
+# DIAGNOSTIC ONLY -- not the main DAN-DG result and not part of the lambda_DG study.
+# Identical to dan_dg.yaml (lambda_DG = 1, same kernels, same median bandwidth, same protocol)
+# except for the MMD estimator: unbiased instead of biased. Question it answers: does the
+# lambda_DG = 1 collapse come from the biased estimator's small-sample pull (8 vs 8 per pair)?
+# Run it only if the TA agrees; checkpoint selection is still mean SOURCE-val macro-F1, and
+# it is not evaluated on Sketch by evaluate_sketch.py.
+base: dan_dg.yaml
+run_name: diag_dan_dg_unbiased
+method:
+  mmd_estimator: unbiased

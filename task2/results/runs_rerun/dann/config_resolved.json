@@ -1,0 +1,20 @@
+{
+  "seed": 6304,
+  "data_root": "/kaggle/input/datasets/talhaimran27/pacs-dataset/PACS",
+  "results_dir": "task2/results/runs",
+  "num_workers": 2,
+  "per_domain_batch": 8,
+  "target_batch": 24,
+  "lr": 0.0001,
+  "weight_decay": 0.0001,
+  "grad_clip": 0.0,
+  "max_epochs": 30,
+  "patience": 5,
+  "run_name": "dann",
+  "method": {
+    "name": "dann",
+    "max_alpha": 1.0,
+    "hidden": 256,
+    "dropout": 0.5
+  }
+}

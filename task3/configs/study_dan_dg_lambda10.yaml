@@ -1,0 +1,4 @@
+base: dan_dg.yaml
+run_name: dan_dg_lambda10
+method:
+  lambda_dg: 10.0

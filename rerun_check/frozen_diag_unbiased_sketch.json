@@ -1,0 +1,19 @@
+{
+  "evaluated_at": "Sun Sep 20 10:44:05 2026",
+  "what": "DIAGNOSTIC ONLY - DAN-DG, lambda_DG = 1, unbiased MMD estimator (task3/configs/diag_dan_dg_unbiased.yaml)",
+  "when": "after all main and study checkpoints were evaluated on Sketch; replaces no reported setting",
+  "source_val_macro_f1": 93.71768029018638,
+  "sketch": {
+    "model": "DIAG unbiased DAN-DG",
+    "sketch_acc": 67.09,
+    "ci95": "+-1.47",
+    "sketch_macro_f1": 70.67,
+    "dog": 64.4,
+    "elephant": 80.7,
+    "giraffe": 72.1,
+    "guitar": 73.7,
+    "horse": 46.9,
+    "house": 95.0,
+    "person": 57.5
+  }
+}

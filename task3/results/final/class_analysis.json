@@ -1,0 +1,132 @@
+{
+  "dan_dg": {
+    "largest_gain": {
+      "class": "person",
+      "delta_pp": 30.0,
+      "confusions_after": [],
+      "confusions_erm": [
+        {
+          "pred": "elephant",
+          "count": 43,
+          "share_%": 26.875
+        },
+        {
+          "pred": "dog",
+          "count": 4,
+          "share_%": 2.5
+        },
+        {
+          "pred": "giraffe",
+          "count": 1,
+          "share_%": 0.625
+        }
+      ]
+    },
+    "largest_drop": {
+      "class": "elephant",
+      "delta_pp": -89.32432432432432,
+      "confusions_after": [
+        {
+          "pred": "person",
+          "count": 740,
+          "share_%": 100.0
+        }
+      ],
+      "confusions_erm": [
+        {
+          "pred": "dog",
+          "count": 51,
+          "share_%": 6.891891891891892
+        },
+        {
+          "pred": "horse",
+          "count": 25,
+          "share_%": 3.3783783783783785
+        },
+        {
+          "pred": "person",
+          "count": 3,
+          "share_%": 0.40540540540540543
+        }
+      ]
+    }
+  },
+  "sam": {
+    "largest_gain": {
+      "class": "dog",
+      "delta_pp": 8.031088082901547,
+      "confusions_after": [
+        {
+          "pred": "elephant",
+          "count": 231,
+          "share_%": 29.922279792746114
+        },
+        {
+          "pred": "horse",
+          "count": 62,
+          "share_%": 8.031088082901555
+        },
+        {
+          "pred": "person",
+          "count": 4,
+          "share_%": 0.5181347150259067
+        }
+      ],
+      "confusions_erm": [
+        {
+          "pred": "elephant",
+          "count": 202,
+          "share_%": 26.16580310880829
+        },
+        {
+          "pred": "horse",
+          "count": 127,
+          "share_%": 16.45077720207254
+        },
+        {
+          "pred": "person",
+          "count": 29,
+          "share_%": 3.756476683937824
+        }
+      ]
+    },
+    "largest_drop": {
+      "class": "horse",
+      "delta_pp": -20.95588235294118,
+      "confusions_after": [
+        {
+          "pred": "dog",
+          "count": 198,
+          "share_%": 24.264705882352942
+        },
+        {
+          "pred": "elephant",
+          "count": 155,
+          "share_%": 18.995098039215687
+        },
+        {
+          "pred": "person",
+          "count": 1,
+          "share_%": 0.12254901960784313
+        }
+      ],
+      "confusions_erm": [
+        {
+          "pred": "elephant",
+          "count": 93,
+          "share_%": 11.397058823529411
+        },
+        {
+          "pred": "dog",
+          "count": 82,
+          "share_%": 10.049019607843137
+        },
+        {
+          "pred": "person",
+          "count": 8,
+          "share_%": 0.9803921568627451
+        }
+      ]
+    }
+  }
+}

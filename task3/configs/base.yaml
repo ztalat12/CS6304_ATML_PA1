@@ -1,0 +1,4 @@
+# Task 3 reuses the Task 2 protocol verbatim (same file => same values).
+base: ../../task2/configs/base.yaml
+results_dir: task3/results/runs
+erm_checkpoint: task2/results/runs/source_only/best.pt    # ERM = Task 2 Source-only (never retrained)

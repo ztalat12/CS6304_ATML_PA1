@@ -1,0 +1,13 @@
+run,orig_F1,rerun_F1,diff,orig_epochs,rerun_epochs,orig_verdict,rerun_verdict,same_verdict,task
+source_only,94.14,94.14,0.0,20.0,20,STABLE,STABLE,yes,2
+dan,95.02,95.02,0.0,15.0,15,STABLE,STABLE,yes,2
+dann,35.04,35.04,0.0,23.0,23,COLLAPSED,COLLAPSED,yes,2
+cdan,88.75,88.75,0.0,6.0,6,DEGRADED,DEGRADED,yes,2
+dan_lambda0.1,93.9,93.9,0.0,13.0,13,STABLE,STABLE,yes,2
+dan_lambda10,5.07,5.07,0.0,6.0,6,COLLAPSED,COLLAPSED,yes,2
+dann_alpha0.25,88.75,88.75,0.0,6.0,6,DEGRADED,DEGRADED,yes,2
+dann_alpha0.5,44.74,44.74,0.0,6.0,6,COLLAPSED,COLLAPSED,yes,2
+dan_dg,5.07,5.07,0.0,6.0,6,COLLAPSED,COLLAPSED,yes,3
+sam,95.6,95.08,-0.52,13.0,16,STABLE,STABLE,yes,3
+dan_dg_lambda0.1,,95.26,,,11,not finished,STABLE,NO,3
+dan_dg_lambda10,,5.07,,,8,never run,COLLAPSED,NO,3

@@ -1,0 +1,4 @@
+base: sam.yaml
+run_name: sam_rho0.1
+method:
+  rho: 0.1

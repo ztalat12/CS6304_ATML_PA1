@@ -1,0 +1,23 @@
+{
+  "best_mean_macro_f1": 5.066996495567924,
+  "epochs_run": 8,
+  "steps_per_epoch": 202,
+  "config": {
+    "seed": 6305,
+    "data_root": "/kaggle/input/datasets/talhaimran27/pacs-dataset/PACS",
+    "results_dir": "task2/results/runs",
+    "num_workers": 2,
+    "per_domain_batch": 8,
+    "target_batch": 24,
+    "lr": 0.0001,
+    "weight_decay": 0.0001,
+    "grad_clip": 0.0,
+    "max_epochs": 30,
+    "patience": 5,
+    "run_name": "dan_lambda10_seed6305",
+    "method": {
+      "name": "dan",
+      "lambda_mmd": 10.0
+    }
+  }
+}

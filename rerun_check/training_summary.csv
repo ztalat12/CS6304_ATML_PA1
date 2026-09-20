@@ -1,0 +1,16 @@
+task,run,epochs,best_epoch,best_src_val_f1,last_src_val_f1,min_loss_cls,max_grad_norm,train_minutes,verdict
+2,source_only,20,15,94.14,91.42,0.025,11.2,7.9,STABLE
+2,dan,15,10,95.02,93.41,0.052,9.4,9.3,STABLE
+2,dann,23,18,35.04,4.83,1.489,10000000.0,14.2,COLLAPSED
+2,cdan,6,1,88.75,27.36,0.568,294.0,3.7,DEGRADED
+2,dan_lambda0.1,13,8,93.9,90.9,0.027,11.2,8.0,STABLE
+2,dan_lambda10,6,1,5.07,5.07,1.93,1580.0,3.7,COLLAPSED
+2,dann_alpha0.25,6,1,88.75,8.6,0.559,1420000.0,3.7,DEGRADED
+2,dann_alpha0.5,6,1,44.74,3.82,0.74,67900.0,3.7,COLLAPSED
+3,dan_dg,6,1,5.07,5.07,1.925,392.0,2.5,COLLAPSED
+3,sam,16,11,95.08,94.27,0.013,7.04,10.8,STABLE
+3,dan_dg_lambda0.1,11,6,95.26,94.47,0.023,10.6,4.6,STABLE
+3,dan_dg_lambda10,8,3,5.07,5.07,1.934,6640.0,3.3,COLLAPSED
+2,dan_lambda10_seed6305,8,3,5.07,5.07,1.918,3910.0,4.9,COLLAPSED
+3,dan_dg_seed6305,7,2,5.07,5.07,1.931,250.0,2.9,COLLAPSED
+3,diag_dan_dg_unbiased,10,5,93.72,91.25,0.06,12.9,4.2,STABLE

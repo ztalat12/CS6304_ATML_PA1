@@ -1,0 +1,17 @@
+,dog,elephant,giraffe,guitar,horse,house,person,net
+T2 DAN vs ERM (T2 source_only),-75,-261,123,-29,-128,10,-72,-432
+T2 DANN vs ERM (T2 source_only),-151,-523,97,-502,-448,-60,-108,-1695
+T2 CDAN vs ERM (T2 source_only),-366,79,-81,15,-22,0,-61,-436
+T2 CDAN vs T2 DANN,-215,602,-178,517,426,60,47,1259
+T2 DAN l=0.1 vs ERM (T2 source_only),-91,-58,7,43,-56,10,44,-101
+T2 DAN vs T2 DAN l=0.1,16,-203,116,-72,-72,0,-116,-331
+T3 SAM vs ERM (T2 source_only),62,10,17,39,-171,-10,-6,-59
+T3 DAN-DG vs ERM (T2 source_only),-411,-661,-341,-507,-632,-70,48,-2574
+T3 DAN-DG l=0.1 vs ERM (T2 source_only),8,-20,186,-19,-197,2,-16,-56
+T3 DAN-DG l=0.1 vs T3 SAM,-54,-30,169,-58,-26,12,-10,3
+T2 DAN l=0.1 vs T3 DAN-DG l=0.1,-99,-38,-179,62,141,8,60,-45
+T2 DAN vs T3 DAN-DG,336,400,464,478,504,80,-120,2142
+DIAG unbiased DAN-DG vs ERM (T2 source_only),86,-64,202,-59,-249,6,-20,-98
+DIAG unbiased DAN-DG vs T3 DAN-DG,497,597,543,448,383,76,-68,2476
+DIAG unbiased DAN-DG vs T3 DAN-DG l=0.1,78,-44,16,-40,-52,4,-4,-42
+DIAG unbiased DAN-DG vs T3 SAM,24,-74,185,-98,-78,16,-14,-39
