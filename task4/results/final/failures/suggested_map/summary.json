@@ -1,0 +1,108 @@
+{
+  "map_file": "task4/configs/plausibility_map.yaml",
+  "map_author": "suggested by Claude on 2026-09-20; not yet reviewed",
+  "map_sha256": "e0fdee6a208a8c0777bef4e5f1fcb041892dccecfcc528714ff243bfd6058187",
+  "note": "Suggested map - not pre-registered, not in the freeze record, changes no metric.",
+  "accepted": {
+    "near": 560,
+    "far": 361
+  },
+  "accepted_plausible": {
+    "near": 384,
+    "far": 0
+  },
+  "selected_labels": [
+    {
+      "group": "near",
+      "fine_class": "bus",
+      "index": 5201,
+      "pred": "truck",
+      "map_label": "plausible"
+    },
+    {
+      "group": "near",
+      "fine_class": "pickup_truck",
+      "index": 9081,
+      "pred": "automobile",
+      "map_label": "plausible"
+    },
+    {
+      "group": "near",
+      "fine_class": "leopard",
+      "index": 6055,
+      "pred": "cat",
+      "map_label": "plausible"
+    },
+    {
+      "group": "near",
+      "fine_class": "tractor",
+      "index": 8996,
+      "pred": "ship",
+      "map_label": "surprising"
+    },
+    {
+      "group": "near",
+      "fine_class": "wolf",
+      "index": 720,
+      "pred": "dog",
+      "map_label": "plausible"
+    },
+    {
+      "group": "near",
+      "fine_class": "fox",
+      "index": 4706,
+      "pred": "cat",
+      "map_label": "plausible"
+    },
+    {
+      "group": "far",
+      "fine_class": "bowl",
+      "index": 9561,
+      "pred": "frog",
+      "map_label": "surprising"
+    },
+    {
+      "group": "far",
+      "fine_class": "sunflower",
+      "index": 5260,
+      "pred": "bird",
+      "map_label": "surprising"
+    },
+    {
+      "group": "far",
+      "fine_class": "bottle",
+      "index": 3888,
+      "pred": "cat",
+      "map_label": "surprising"
+    },
+    {
+      "group": "far",
+      "fine_class": "mushroom",
+      "index": 3502,
+      "pred": "frog",
+      "map_label": "surprising"
+    },
+    {
+      "group": "far",
+      "fine_class": "chair",
+      "index": 4259,
+      "pred": "airplane",
+      "map_label": "surprising"
+    },
+    {
+      "group": "far",
+      "fine_class": "wardrobe",
+      "index": 6390,
+      "pred": "truck",
+      "map_label": "surprising"
+    }
+  ],
+  "views_labelled": [
+    "view_confident_borderline",
+    "view_random_sample"
+  ],
+  "judgement": {
+    "filled": 0,
+    "of": 44
+  }
+}

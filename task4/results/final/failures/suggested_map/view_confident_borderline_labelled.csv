@@ -1,0 +1,33 @@
+role,group,fine_class,index,pred,second_choice,u,tau,margin_below_tau,max_logit,max_softmax,plausible_targets,map_label
+most confident,near,bus,5201,truck,automobile,-11.8337,-5.77559,6.05808,11.8337,0.999831,automobile/truck,plausible
+borderline,near,bus,3236,truck,automobile,-6.00336,-5.77559,0.22777,6.00336,0.658194,automobile/truck,plausible
+most confident,near,pickup_truck,9081,automobile,truck,-11.6719,-5.77559,5.89634,11.6719,0.999956,automobile/truck,plausible
+borderline,near,pickup_truck,47,truck,automobile,-5.88763,-5.77559,0.112037,5.88763,0.500386,automobile/truck,plausible
+most confident,near,motorcycle,3376,automobile,truck,-9.81854,-5.77559,4.04295,9.81854,0.999614,automobile/truck,plausible
+borderline,near,motorcycle,6022,truck,airplane,-5.81302,-5.77559,0.0374255,5.81302,0.92708,automobile/truck,plausible
+most confident,near,tractor,8996,ship,truck,-11.2798,-5.77559,5.50425,11.2798,0.999953,automobile/truck,surprising
+borderline,near,tractor,2101,ship,deer,-5.80578,-5.77559,0.030189,5.80578,0.958132,automobile/truck,surprising
+most confident,near,wolf,720,dog,cat,-11.0215,-5.77559,5.24591,11.0215,0.999862,dog,plausible
+borderline,near,wolf,6324,dog,cat,-5.98342,-5.77559,0.207826,5.98342,0.677254,dog,plausible
+most confident,near,fox,4706,cat,deer,-10.5493,-5.77559,4.77371,10.5493,0.999879,dog/cat,plausible
+borderline,near,fox,8735,cat,dog,-5.82089,-5.77559,0.0452961,5.82089,0.895691,dog/cat,plausible
+most confident,near,leopard,6055,cat,bird,-11.646,-5.77559,5.87036,11.646,0.999818,cat,plausible
+borderline,near,leopard,8774,cat,frog,-5.85108,-5.77559,0.0754885,5.85108,0.816683,cat,plausible
+most confident,near,camel,8143,cat,dog,-10.0463,-5.77559,4.27072,10.0463,0.99964,horse/deer,surprising
+borderline,near,camel,8598,deer,horse,-5.7922,-5.77559,0.0166106,5.7922,0.91619,horse/deer,plausible
+most confident,far,bottle,3888,cat,bird,-10.8573,-5.77559,5.08166,10.8573,0.999819,-,surprising
+borderline,far,bottle,6214,ship,truck,-5.83769,-5.77559,0.062097,5.83769,0.962443,-,surprising
+most confident,far,bowl,9561,frog,cat,-11.7372,-5.77559,5.96156,11.7372,0.999969,-,surprising
+borderline,far,bowl,3091,ship,truck,-5.83543,-5.77559,0.0598416,5.83543,0.963742,-,surprising
+most confident,far,chair,4259,airplane,cat,-10.6442,-5.77559,4.86856,10.6442,0.999784,-,surprising
+borderline,far,chair,8498,bird,frog,-5.80657,-5.77559,0.0309786,5.80657,0.90265,-,surprising
+most confident,far,clock,1586,truck,automobile,-9.70741,-5.77559,3.93182,9.70741,0.999617,-,surprising
+borderline,far,clock,618,ship,cat,-6.19241,-5.77559,0.416815,6.19241,0.94633,-,surprising
+most confident,far,keyboard,8369,truck,automobile,-9.8045,-5.77559,4.02891,9.8045,0.999682,-,surprising
+borderline,far,keyboard,771,horse,deer,-5.81016,-5.77559,0.0345678,5.81016,0.652098,-,surprising
+most confident,far,mushroom,3502,frog,deer,-10.7966,-5.77559,5.02105,10.7966,0.999892,-,surprising
+borderline,far,mushroom,6575,truck,airplane,-5.82083,-5.77559,0.0452346,5.82083,0.968579,-,surprising
+most confident,far,sunflower,5260,bird,cat,-10.8652,-5.77559,5.08958,10.8652,0.999895,-,surprising
+borderline,far,sunflower,8785,bird,dog,-5.77717,-5.77559,0.00157733,5.77717,0.952024,-,surprising
+most confident,far,wardrobe,6390,truck,cat,-10.4315,-5.77559,4.65588,10.4315,0.999443,-,surprising
+borderline,far,wardrobe,4910,truck,cat,-5.83928,-5.77559,0.0636916,5.83928,0.766586,-,surprising

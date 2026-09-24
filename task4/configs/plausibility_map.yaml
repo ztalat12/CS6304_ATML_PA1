@@ -1,0 +1,35 @@
+# SUGGESTED plausibility map for the Task 4 failure analysis - review it and edit it freely.
+#
+# What it is: for each unknown CIFAR-100 class, the CIFAR-10 predictions that would count as a SEMANTICALLY
+# PLAUSIBLE confusion (the handout: "distinguish semantically plausible confusions from surprising failures").
+# Any other prediction is labelled "surprising".
+#
+# What it is NOT: it is not pre-registered, not part of the freeze record, and it changes no metric, table,
+# threshold or model. It only labels failures that have already been selected.
+#
+# Suggested rule (Claude, 20 Sep 2026): same coarse category AND similar body plan / function.
+#   vehicles -> the two CIFAR-10 road vehicles; canids -> dog (fox also cat, similar size and face);
+#   leopard -> cat (felid); camel -> the large hoofed animals; far classes have no counterpart by design.
+#
+# After editing, re-apply it (seconds, no GPU, no data access):
+#   python -m task4.evaluation.apply_plausibility_map
+# Valid CIFAR-10 names: airplane automobile bird cat deer dog frog horse ship truck
+author: "suggested by Claude on 2026-09-20; not yet reviewed"
+near:
+  bus: [automobile, truck]
+  pickup_truck: [automobile, truck]
+  motorcycle: [automobile, truck]
+  tractor: [automobile, truck]
+  wolf: [dog]
+  fox: [dog, cat]
+  leopard: [cat]
+  camel: [horse, deer]
+far:
+  bottle: []
+  bowl: []
+  chair: []
+  clock: []
+  keyboard: []
+  mushroom: []
+  sunflower: []
+  wardrobe: []

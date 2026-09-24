@@ -1,0 +1,24 @@
+{
+  "minutes": {
+    "B vanilla": 25.7694425145785,
+    "C gcsc": 29.634868069489798,
+    "D proser": 14.586036721865336,
+    "E extract+freeze": 1.7228790481885274,
+    "F evaluate": 53.00801376501719,
+    "G failures": 0.5135341246922811,
+    "I1 diagnosis": 1.0591791272163391,
+    "I2 variant": 25.567085409164427,
+    "I3 variant eval": 1.0687804142634074,
+    "total": 154.69591684738796
+  },
+  "env": {
+    "gpu": "Tesla T4",
+    "gpu_count": 2,
+    "torch": "2.10.0+cu128",
+    "torchvision": "0.25.0+cu128",
+    "cuda": "12.8",
+    "cudnn": 91002,
+    "python": "3.12.13",
+    "cpus": 4
+  }
+}

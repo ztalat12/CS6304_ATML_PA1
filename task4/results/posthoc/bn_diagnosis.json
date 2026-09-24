@@ -1,0 +1,51 @@
+{
+  "data": "CIFAR-10 only: running statistics from training images, accuracy on validation images",
+  "recal_batches": 200,
+  "rows": [
+    {
+      "checkpoint": "vanilla/best.pt",
+      "role": "control: never saw mixed features",
+      "epoch": 96,
+      "val_acc_as_saved": 94.92,
+      "val_acc_bn_reestimated": 94.88,
+      "dummy_wins_as_saved": NaN,
+      "dummy_wins_bn_reestimated": NaN,
+      "recal_images": 25600,
+      "mean_shift_stem": 0.0030413446947932243,
+      "mean_shift_layer1": 0.0008639453299110755,
+      "mean_shift_layer2": 0.0011815314763225615,
+      "mean_shift_layer3": 0.0016324260737746953,
+      "mean_shift_layer4": 0.002772491751238704
+    },
+    {
+      "checkpoint": "proser/best.pt",
+      "role": "selected PROSER checkpoint",
+      "epoch": 1,
+      "val_acc_as_saved": 94.64,
+      "val_acc_bn_reestimated": 94.76,
+      "dummy_wins_as_saved": 5.68,
+      "dummy_wins_bn_reestimated": 5.58,
+      "recal_images": 25600,
+      "mean_shift_stem": 0.016994593665003777,
+      "mean_shift_layer1": 0.0015192919236142188,
+      "mean_shift_layer2": 0.001986674079671502,
+      "mean_shift_layer3": 0.004073673533275724,
+      "mean_shift_layer4": 0.00577327823266387
+    },
+    {
+      "checkpoint": "proser/last.pt",
+      "role": "PROSER after all 50 epochs",
+      "epoch": 50,
+      "val_acc_as_saved": 89.46,
+      "val_acc_bn_reestimated": 95.02,
+      "dummy_wins_as_saved": 100.0,
+      "dummy_wins_bn_reestimated": 2.32,
+      "recal_images": 25600,
+      "mean_shift_stem": 0.0034247590228915215,
+      "mean_shift_layer1": 0.0017336918390356004,
+      "mean_shift_layer2": 0.0014609720092266798,
+      "mean_shift_layer3": 0.011246528243646026,
+      "mean_shift_layer4": 0.0620551846921444
+    }
+  ]
+}

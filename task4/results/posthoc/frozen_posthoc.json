@@ -1,0 +1,29 @@
+{
+  "frozen_at": "2026-09-21T08:56:38+00:00",
+  "label": "POST-HOC - designed after run 1 from CIFAR-10 validation evidence only; not part of the pre-registered evaluation",
+  "variant_checkpoint": {
+    "path": "task4/results/posthoc/runs/proser_bncal/best.pt",
+    "sha256": "0cf0f57b393750f551b3ef326f8bd37a2bb1c8c3a121fa973f15dc7e8990ee65",
+    "epoch": 37,
+    "val_acc": 95.1
+  },
+  "thresholds": {
+    "mls": -5.889936637878415,
+    "proser": -8.843201960314834e-05
+  },
+  "val_acceptance": {
+    "mls": 95.0,
+    "proser": 95.0
+  },
+  "code_sha256": {
+    "task4/configs/proser_bncal.yaml": "edcec778904a37f8cc68070c744f6fbc2c8304a6dc7f63841b0f8da8562f7670",
+    "task4/methods/bn_recalibration.py": "edba0b78443ad114303d0d98bb57b8a5684f34fabc80a4255016c0eea5a97b0e",
+    "task4/train.py": "7786644c5175a0228c9127eb2e01317af4c0288a1bc5df9b73d77aaa4c8c46a7",
+    "task4/posthoc/bn_diagnosis.py": "59da04729be424aeee78daec08363eb49b8901ea638073cf6c042748c0b7d6d9",
+    "task4/posthoc/evaluate_variant.py": "d53e0ec45f9b443db4ecf3831cbde7ae9c524d737cf396d1b239c8d7141c2982"
+  },
+  "main_freeze": {
+    "frozen_at": "2026-09-21T07:35:54+00:00",
+    "sha256": "bc42f097add3ebac7a90ef49185a5b0ba4dd6f78d4981734414725291657a343"
+  }
+}

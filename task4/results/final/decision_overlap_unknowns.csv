@@ -1,0 +1,13 @@
+group,A,B,both_reject_%,only_A_rejects_%,only_B_rejects_%,both_accept_%
+near,MSP,MLS,22.00,3.62,8.00,66.38
+near,MSP,Energy,21.38,4.25,8.75,65.62
+near,MSP,Mahalanobis,23.12,2.50,3.38,71.00
+near,MLS,Energy,29.38,0.62,0.75,69.25
+near,MLS,Mahalanobis,21.25,8.75,5.25,64.75
+near,Energy,Mahalanobis,20.88,9.25,5.62,64.25
+far,MSP,MLS,40.00,2.25,14.88,42.88
+far,MSP,Energy,39.12,3.12,16.50,41.25
+far,MSP,Mahalanobis,39.88,2.38,11.00,46.75
+far,MLS,Energy,54.00,0.88,1.62,43.50
+far,MLS,Mahalanobis,43.50,11.38,7.38,37.75
+far,Energy,Mahalanobis,43.00,12.62,7.88,36.50

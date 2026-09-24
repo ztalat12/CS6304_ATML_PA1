@@ -1,0 +1,305 @@
+{
+  "frozen_at": "2026-09-21T07:35:54+00:00",
+  "note": "Everything below was fixed using CIFAR-10 train/val only, before any CIFAR-100 image was loaded.",
+  "protocol": {
+    "threshold": "tau = 95th percentile of validation unknownness; accept iff u <= tau",
+    "percentile": 95.0,
+    "proser_detection_temperature": 1024.0
+  },
+  "score_definitions": {
+    "msp": "u = 1 - max_k softmax(z)_k  (10 known logits; computed exactly in float64)",
+    "mls": "u = - max_k z_k  (10 known logits)",
+    "energy": "u = - logsumexp_k z_k  (10 known logits, T = 1)",
+    "mahalanobis": "u = min_c sum_d (f_d - mu_cd)^2 / (sigma_d^2 + 1e-6); mu_c, sigma^2 = class means and pooled within-class variance of UNAUGMENTED 45k CIFAR-10 training features",
+    "proser": "u = p_dummy - max_k p_k, p = softmax([z, max_j d_j] / 1024)  (PROSER reference code)"
+  },
+  "checkpoints": {
+    "vanilla": {
+      "path": "task4/results/runs/vanilla/best.pt",
+      "sha256": "da540bbd7fe5b3ef17d2d7dde5ab8566dc9dafd2e31c1a26bda7808aada55683",
+      "epoch": 96,
+      "val_acc": 94.92,
+      "debug_subset": 0
+    },
+    "gcsc": {
+      "path": "task4/results/runs/gcsc/best.pt",
+      "sha256": "f064d95b024a4f00d385bcbbcf806229212e8b44fae919a0fcaaf7bbb82572fd",
+      "epoch": 96,
+      "val_acc": 95.4,
+      "debug_subset": 0
+    },
+    "proser": {
+      "path": "task4/results/runs/proser/best.pt",
+      "sha256": "27526c6298d0580910fb119de717000bd6f820c3d9cb3c2cd35f7249a9260cff",
+      "epoch": 1,
+      "val_acc": 94.64,
+      "debug_subset": 0
+    }
+  },
+  "mahalanobis_stats": {
+    "vanilla": {
+      "path": "task4/results/frozen/maha_vanilla.npz",
+      "sha256": "ed85037ff23ab8a4ee61e621bcfbf0dea73929939d0dc9f6b06ac224e3bfdae8",
+      "n_train": 45000,
+      "var_min": 0.0004697740770793006,
+      "var_max": 0.027269174215772404
+    },
+    "gcsc": {
+      "path": "task4/results/frozen/maha_gcsc.npz",
+      "sha256": "34fd32a866c9d935c136a3cf9505f53c0c60593a31fdd93589702398dd79afb0",
+      "n_train": 45000,
+      "var_min": 0.0004988408006239158,
+      "var_max": 0.037227231715669475
+    },
+    "proser": {
+      "path": "task4/results/frozen/maha_proser.npz",
+      "sha256": "bb9ab57dc9a179825918e203c9af96de387eb09b4ce120410c515f82ab928a4a",
+      "n_train": 45000,
+      "var_min": 0.0004491283503499141,
+      "var_max": 0.02805154006537863
+    }
+  },
+  "thresholds": {
+    "vanilla": {
+      "msp": 0.18028661983898314,
+      "mls": -5.77559094429016,
+      "energy": -5.967386642551224,
+      "mahalanobis": 3058.252950233459
+    },
+    "gcsc": {
+      "msp": 0.18471563940515964,
+      "mls": -6.010140395164488,
+      "energy": -6.217089948161482,
+      "mahalanobis": 1991.0120330640825
+    },
+    "proser": {
+      "msp": 0.2524650703460892,
+      "mls": -3.5771505832672092,
+      "energy": -3.879505908213828,
+      "mahalanobis": 2929.2206414253255,
+      "proser": 1.6028872046400294e-05
+    }
+  },
+  "val_acceptance": {
+    "vanilla": {
+      "msp": 95.0,
+      "mls": 95.0,
+      "energy": 95.0,
+      "mahalanobis": 95.0
+    },
+    "gcsc": {
+      "msp": 95.0,
+      "mls": 95.0,
+      "energy": 95.0,
+      "mahalanobis": 95.0
+    },
+    "proser": {
+      "msp": 95.0,
+      "mls": 95.0,
+      "energy": 95.0,
+      "mahalanobis": 95.0,
+      "proser": 95.0
+    }
+  },
+  "val_csa": {
+    "vanilla": 94.92,
+    "gcsc": 95.39999999999999,
+    "proser": 94.64
+  },
+  "code_sha256": {
+    "task4/scores/__init__.py": "e2f1dacfd458305c63b6febc2086f86511fb98508e3c10489aff83a57a320316",
+    "task4/scores/msp.py": "0e5cf5ad297494bfcb062369ca749c2e1b073f4e030e88c575920cb24b54bf92",
+    "task4/scores/mls.py": "c4d2ce5a1a31f2558ba3dc8abae6e8b2b7fb5ab670df6c6806064a80e714cc31",
+    "task4/scores/energy.py": "d47e1b11648250061502e1046159fbaeacc91f145b5f857c0f72258d81ffc74f",
+    "task4/scores/mahalanobis.py": "3044b320ed5be49e902fd7de70076a3a38af6b82c6bc02492dad670d96811841",
+    "task4/scores/proser_detection.py": "7cfdd0ad52b6d434338aed0f5be4126556e8f4979307a6548c0fcf3886e854b9",
+    "task4/evaluation/thresholds.py": "bf34fadc475bc52bc56226b505717ab1408bacd7e330fc9101024d25f721458e",
+    "task4/configs/proser.yaml": "0b0122f3e0bb135dfaf6641c605b6e8bae48a49966bca1ee717334874602f645",
+    "task4/models/resnet_cifar.py": "3c3f285b04e1cee059640012eebb1213df0e9c4159b71dd59b3c853c10ab0891",
+    "task4/data/cifar10.py": "13e78eb535b61281e7df6cbb44f3f40c782a1a262857972de277359df3204f1e",
+    "task4/extract_outputs.py": "5d66e26b5710367f91f1b0527bbf9d6266f99faf2ffb613fcff3146fb1b53f84",
+    "task4/data/cifar100_unknowns.py": "a5332a5caccc2735ae5d481a7d58aec04ea8747a49006237de676a218d51e854"
+  },
+  "preregistered": {
+    "table1_rows": [
+      [
+        "vanilla",
+        "msp"
+      ],
+      [
+        "vanilla",
+        "mls"
+      ],
+      [
+        "vanilla",
+        "energy"
+      ],
+      [
+        "vanilla",
+        "mahalanobis"
+      ]
+    ],
+    "table2_rows": [
+      [
+        "vanilla",
+        "mls"
+      ],
+      [
+        "gcsc",
+        "mls"
+      ],
+      [
+        "proser",
+        "mls"
+      ],
+      [
+        "proser",
+        "proser"
+      ]
+    ],
+    "comparisons_table1": [
+      [
+        [
+          "vanilla",
+          "msp"
+        ],
+        [
+          "vanilla",
+          "mls"
+        ]
+      ],
+      [
+        [
+          "vanilla",
+          "msp"
+        ],
+        [
+          "vanilla",
+          "energy"
+        ]
+      ],
+      [
+        [
+          "vanilla",
+          "msp"
+        ],
+        [
+          "vanilla",
+          "mahalanobis"
+        ]
+      ],
+      [
+        [
+          "vanilla",
+          "mls"
+        ],
+        [
+          "vanilla",
+          "energy"
+        ]
+      ],
+      [
+        [
+          "vanilla",
+          "mls"
+        ],
+        [
+          "vanilla",
+          "mahalanobis"
+        ]
+      ],
+      [
+        [
+          "vanilla",
+          "energy"
+        ],
+        [
+          "vanilla",
+          "mahalanobis"
+        ]
+      ]
+    ],
+    "comparisons_table2": [
+      [
+        [
+          "gcsc",
+          "mls"
+        ],
+        [
+          "vanilla",
+          "mls"
+        ]
+      ],
+      [
+        [
+          "proser",
+          "mls"
+        ],
+        [
+          "vanilla",
+          "mls"
+        ]
+      ],
+      [
+        [
+          "proser",
+          "proser"
+        ],
+        [
+          "vanilla",
+          "mls"
+        ]
+      ],
+      [
+        [
+          "proser",
+          "mls"
+        ],
+        [
+          "gcsc",
+          "mls"
+        ]
+      ],
+      [
+        [
+          "proser",
+          "proser"
+        ],
+        [
+          "gcsc",
+          "mls"
+        ]
+      ]
+    ],
+    "csa_comparisons": [
+      [
+        "gcsc",
+        "vanilla"
+      ],
+      [
+        "proser",
+        "vanilla"
+      ],
+      [
+        "proser",
+        "gcsc"
+      ]
+    ],
+    "failure_analysis": {
+      "model": "vanilla",
+      "score": "mls",
+      "rule": "Among unknowns ACCEPTED by Vanilla-MLS (u <= tau), take for every CIFAR-100 class its most confidently accepted image (lowest u_MLS = largest max logit); order these by u_MLS ascending and keep the first 6 per group (near, far). One image per class keeps the examples diverse. If fewer than 3 classes of a group have an accepted image, the selection is topped up to 3 with the next most confidently accepted images of that group.",
+      "n_per_group": 6
+    },
+    "failure_views": {
+      "confident_borderline": {
+        "rule": "For every CIFAR-100 class with at least one image accepted by Vanilla-MLS: its most confidently accepted image (lowest u_MLS) and its borderline accepted image (highest u_MLS that is still <= tau, i.e. closest to the threshold). A class with a single accepted image shows it once. Classes in the handout's order."
+      },
+      "random": {
+        "rule": "A random sample of 6 accepted images per group (near, far): the group's accepted images are sorted by (u_MLS, CIFAR-100 index), then numpy default_rng(6304).choice picks 6 without replacement (all of them if fewer); shown in ascending u_MLS order.",
+        "n_per_group": 6,
+        "seed": 6304
+      }
+    }
+  }
+}

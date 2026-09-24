@@ -1,0 +1,4 @@
+A,B,CSA_A,CSA_B,diff,only_A_correct,only_B_correct,p_exact,p_holm,significant_0.05
+gcsc,vanilla,95.14,94.4,0.74,266,192,0.000631463,0.00126293,True
+proser,vanilla,94.26,94.4,-0.14,74,88,0.307067,0.307067,False
+proser,gcsc,94.26,95.14,-0.88,192,280,5.93796e-05,0.000178139,True

@@ -1,0 +1,18 @@
+# Step 4 - PROSER (Zhou et al., CVPR 2021): classifier placeholders + data placeholders.
+# Handout: initialise from the selected Vanilla checkpoint, append five randomly initialised dummy
+# classifiers, fine-tune the complete model for 50 epochs with SGD lr 1e-3, momentum 0.9, weight decay 5e-4,
+# cosine decay, batch size 128, seed 6304. Checkpoint chosen by CIFAR-10 validation accuracy only
+# (computed on the ten known-class logits).
+base: base.yaml
+run_name: proser
+epochs: 50
+lr: 0.001
+init_from: task4/results/runs/vanilla/best.pt     # the selected Vanilla checkpoint
+method:
+  name: proser
+  n_dummies: 5            # five dummy classifiers; the placeholder response is their MAXIMUM
+  beta: 1.0               # weight of the classifier-placeholder term  (handout: beta = 1)
+  gamma: 0.1              # weight of the data-placeholder term        (handout: gamma = 0.1)
+  mixup_alpha: 2.0        # lambda ~ Beta(2, 2)
+  mix_after: layer2       # manifold mixup after layer2, before layer3
+  detection_temperature: 1024   # temperature of the placeholder detection score (reference code)

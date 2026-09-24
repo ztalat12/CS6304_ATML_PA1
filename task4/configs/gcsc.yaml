@@ -1,0 +1,10 @@
+# Step 3 - GCSC ("good closed-set classifier", Vaze et al. 2022) evaluated with MLS.
+# EXACTLY the Vanilla recipe with ONE change: RandAugment(num_ops=2, magnitude=9) inserted after the crop and
+# flip and before ToTensor/Normalize. Initialisation, optimiser, schedule, batch size, epochs, seed and the
+# checkpoint rule all come unchanged from base.yaml.
+base: base.yaml
+run_name: gcsc
+method:
+  name: gcsc
+  randaugment_num_ops: 2
+  randaugment_magnitude: 9

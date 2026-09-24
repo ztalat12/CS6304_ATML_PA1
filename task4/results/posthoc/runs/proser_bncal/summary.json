@@ -1,0 +1,14 @@
+{
+  "run_name": "proser_bncal",
+  "method": "proser",
+  "finished": true,
+  "best_epoch": 37,
+  "best_val_acc": 95.1,
+  "epochs": 50,
+  "train_minutes": 25.450860126813254,
+  "device": "Tesla T4",
+  "torch": "2.10.0+cu128",
+  "amp": true,
+  "debug_subset": 0,
+  "last_val_acc": 94.92
+}

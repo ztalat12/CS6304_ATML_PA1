@@ -1,0 +1,5 @@
+# Step 1 - Vanilla closed-set baseline: ten-class CIFAR ResNet-18, cross-entropy, random initialisation.
+base: base.yaml
+run_name: vanilla
+method:
+  name: vanilla

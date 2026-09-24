@@ -1,0 +1,14 @@
+{
+  "run_name": "vanilla",
+  "method": "vanilla",
+  "finished": true,
+  "best_epoch": 96,
+  "best_val_acc": 94.92,
+  "epochs": 100,
+  "train_minutes": 25.677763080596925,
+  "device": "Tesla T4",
+  "torch": "2.10.0+cu128",
+  "amp": true,
+  "debug_subset": 0,
+  "last_val_acc": 94.88
+}

@@ -1,0 +1,37 @@
+# Task 4 shared recipe. Every method config inherits from this file (`base: base.yaml`), so
+# the settings the handout says must be identical across Vanilla and GCSC come from ONE place.
+#
+# Handout (Dataset, Models, and Experimental Setup):
+#   random crop 32x32 with 4-pixel padding + random horizontal flip;
+#   SGD lr 0.1, momentum 0.9, weight decay 5e-4, cosine decay;
+#   batch size 128, 100 epochs, seed 6304;
+#   keep the checkpoint with the highest CIFAR-10 validation accuracy.
+
+seed: 6304
+
+# ---- data -------------------------------------------------------------------------------------------
+data_root: data                      # torchvision CIFAR root (git-ignored). The notebook overrides it.
+split_file: task4/data/splits/cifar10_split_seed6304.json    # 45k train / 5k val indices (committed)
+val_fraction: 0.1                    # stratified 90/10 split of the official training partition
+
+# ---- optimisation -----------------------------------------------------------------------------------
+batch_size: 128
+epochs: 100
+lr: 0.1
+momentum: 0.9
+weight_decay: 5.0e-4
+scheduler: cosine                    # CosineAnnealingLR(T_max=epochs), stepped once per epoch
+
+# ---- engineering (do not change the maths; they only change speed) -------------------------------
+amp: true                            # mixed precision on the GPU (float16 matmuls, float32 master weights)
+channels_last: true                  # memory layout that lets T4 tensor cores run convolutions faster
+num_workers: 4                       # fixed so the augmentation random streams are identical run to run
+eval_batch_size: 512                 # validation / extraction batch size (no effect on results)
+
+# ---- where things go ----------------------------------------------------------------------------------
+results_dir: task4/results/runs      # one folder per run: config_resolved.json, history.json, best.pt
+cache_dir: task4/cache               # saved features/logits (large, git-ignored)
+debug_subset: 0                      # >0 = use only this many images per split (smoke tests ONLY)
+
+method:
+  name: vanilla

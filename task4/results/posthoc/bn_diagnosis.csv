@@ -1,0 +1,4 @@
+checkpoint,role,epoch,val_acc_as_saved,val_acc_bn_reestimated,dummy_wins_as_saved,dummy_wins_bn_reestimated,recal_images,mean_shift_stem,mean_shift_layer1,mean_shift_layer2,mean_shift_layer3,mean_shift_layer4
+vanilla/best.pt,control: never saw mixed features,96,94.9200,94.8800,,,25600,0.0030,0.0009,0.0012,0.0016,0.0028
+proser/best.pt,selected PROSER checkpoint,1,94.6400,94.7600,5.6800,5.5800,25600,0.0170,0.0015,0.0020,0.0041,0.0058
+proser/last.pt,PROSER after all 50 epochs,50,89.4600,95.0200,100.0000,2.3200,25600,0.0034,0.0017,0.0015,0.0112,0.0621

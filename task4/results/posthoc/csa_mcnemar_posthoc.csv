@@ -1,0 +1,3 @@
+A,B,CSA_A,CSA_B,diff,only_A_correct,only_B_correct,p_exact,p_holm,significant_0.05
+proser_bncal,vanilla,94.57,94.4,0.17,118,101,0.279587,0.279587,False
+proser_bncal,proser,94.57,94.26,0.31,149,118,0.0661608,0.132322,False

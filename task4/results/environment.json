@@ -1,0 +1,10 @@
+{
+  "gpu": "Tesla T4",
+  "gpu_count": 2,
+  "torch": "2.10.0+cu128",
+  "torchvision": "0.25.0+cu128",
+  "cuda": "12.8",
+  "cudnn": 91002,
+  "python": "3.12.13",
+  "cpus": 4
+}

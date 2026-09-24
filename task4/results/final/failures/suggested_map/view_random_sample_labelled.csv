@@ -1,0 +1,13 @@
+group,fine_class,index,pred,second_choice,u,tau,margin_below_tau,max_logit,max_softmax,plausible_targets,map_label
+near,pickup_truck,9880,truck,automobile,-9.38845,-5.77559,3.61286,9.38845,0.999409,automobile/truck,plausible
+near,leopard,5698,frog,bird,-9.04798,-5.77559,3.27239,9.04798,0.999327,cat,surprising
+near,tractor,6430,truck,ship,-8.57508,-5.77559,2.79949,8.57508,0.991084,automobile/truck,plausible
+near,pickup_truck,1491,automobile,truck,-6.47907,-5.77559,0.703477,6.47907,0.953874,automobile/truck,plausible
+near,wolf,3927,cat,dog,-6.0396,-5.77559,0.264006,6.0396,0.908326,dog,surprising
+near,pickup_truck,3537,automobile,truck,-5.9184,-5.77559,0.142813,5.9184,0.576348,automobile/truck,plausible
+far,chair,6245,airplane,horse,-8.54152,-5.77559,2.76593,8.54152,0.999091,-,surprising
+far,clock,7933,truck,automobile,-7.54211,-5.77559,1.76652,7.54211,0.985842,-,surprising
+far,bowl,6069,cat,automobile,-6.94249,-5.77559,1.1669,6.94249,0.98574,-,surprising
+far,sunflower,8866,airplane,bird,-6.7948,-5.77559,1.01921,6.7948,0.886933,-,surprising
+far,bottle,7415,ship,cat,-5.93117,-5.77559,0.155581,5.93117,0.96016,-,surprising
+far,mushroom,3493,bird,deer,-5.89534,-5.77559,0.119745,5.89534,0.917615,-,surprising

@@ -1,0 +1,9 @@
+table,group,A,B,reject_A,reject_B,only_A_rejects,only_B_rejects,p_exact,p_holm,significant_0.05
+posthoc,near,proser_bncal-MLS,vanilla-MLS,27.5,30,49,69,0.0798343,0.239503,False
+posthoc,near,proser_bncal-PROSER-detect,vanilla-MLS,25.5,30,47,83,0.00202378,0.00809512,True
+posthoc,near,proser_bncal-MLS,proser-MLS,27.5,25.25,79,61,0.150528,0.301055,False
+posthoc,near,proser_bncal-PROSER-detect,proser-PROSER-detect,25.5,24.625,80,73,0.627771,0.627771,False
+posthoc,far,proser_bncal-MLS,vanilla-MLS,54.5,54.875,65,68,0.862403,0.862403,False
+posthoc,far,proser_bncal-PROSER-detect,vanilla-MLS,51,54.875,57,88,0.0124569,0.0249138,True
+posthoc,far,proser_bncal-MLS,proser-MLS,54.5,47.875,120,67,0.000130196,0.000390589,True
+posthoc,far,proser_bncal-PROSER-detect,proser-PROSER-detect,51,43.75,131,73,5.9233e-05,0.000236932,True

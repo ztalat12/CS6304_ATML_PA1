@@ -1,0 +1,31 @@
+{
+  "seed": 6304,
+  "data_root": "/tmp/cifar",
+  "split_file": "task4/data/splits/cifar10_split_seed6304.json",
+  "val_fraction": 0.1,
+  "batch_size": 128,
+  "epochs": 50,
+  "lr": 0.001,
+  "momentum": 0.9,
+  "weight_decay": 0.0005,
+  "scheduler": "cosine",
+  "amp": true,
+  "channels_last": true,
+  "num_workers": 4,
+  "eval_batch_size": 512,
+  "results_dir": "task4/results/posthoc/runs",
+  "cache_dir": "/tmp/task4_cache",
+  "debug_subset": 0,
+  "method": {
+    "name": "proser",
+    "n_dummies": 5,
+    "beta": 1.0,
+    "gamma": 0.1,
+    "mixup_alpha": 2.0,
+    "mix_after": "layer2",
+    "detection_temperature": 1024
+  },
+  "run_name": "proser_bncal",
+  "init_from": "task4/results/runs/vanilla/best.pt",
+  "bn_recalibrate_batches": 200
+}

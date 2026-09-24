@@ -1,0 +1,16 @@
+# POST-HOC VARIANT - not one of the three pre-registered models; reported separately and labelled as post-hoc.
+#
+# Why: in run 1, PROSER's CIFAR-10 VALIDATION accuracy fell from 94.6% (epoch 1) to 85-93% while training
+# accuracy stayed at 99.9%, and the dummy came to beat every known class on up to 100% of validation images.
+# That evidence is CIFAR-10 only. The suspected cause is BatchNorm running statistics contaminated by the
+# manifold-mixed features (see task4/methods/bn_recalibration.py and task4/posthoc/bn_diagnosis.py).
+#
+# What changes: NOTHING in training. Same initialisation, losses, optimiser, schedule, seed and data order as
+# proser.yaml. Running statistics are never used while training, so the weight trajectory is the same. The one
+# difference: after every epoch, before validation and checkpointing, BatchNorm running statistics are re-estimated
+# from real CIFAR-10 training images (200 batches of 128, crop + flip, exact average). Checkpoint selection is
+# still by CIFAR-10 validation accuracy on the ten known logits.
+base: proser.yaml
+run_name: proser_bncal
+results_dir: task4/results/posthoc/runs
+bn_recalibrate_batches: 200

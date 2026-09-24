@@ -1,0 +1,14 @@
+{
+  "run_name": "gcsc",
+  "method": "gcsc",
+  "finished": true,
+  "best_epoch": 96,
+  "best_val_acc": 95.4,
+  "epochs": 100,
+  "train_minutes": 29.53995172182719,
+  "device": "Tesla T4",
+  "torch": "2.10.0+cu128",
+  "amp": true,
+  "debug_subset": 0,
+  "last_val_acc": 95.22
+}

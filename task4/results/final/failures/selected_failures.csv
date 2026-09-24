@@ -1,0 +1,13 @@
+group,fine_class,index,pred,second_choice,u,tau,margin_below_tau,max_logit,max_softmax
+near,bus,5201,truck,automobile,-11.8337,-5.77559,6.05808,11.8337,0.999831
+near,pickup_truck,9081,automobile,truck,-11.6719,-5.77559,5.89634,11.6719,0.999956
+near,leopard,6055,cat,bird,-11.646,-5.77559,5.87036,11.646,0.999818
+near,tractor,8996,ship,truck,-11.2798,-5.77559,5.50425,11.2798,0.999953
+near,wolf,720,dog,cat,-11.0215,-5.77559,5.24591,11.0215,0.999862
+near,fox,4706,cat,deer,-10.5493,-5.77559,4.77371,10.5493,0.999879
+far,bowl,9561,frog,cat,-11.7372,-5.77559,5.96156,11.7372,0.999969
+far,sunflower,5260,bird,cat,-10.8652,-5.77559,5.08958,10.8652,0.999895
+far,bottle,3888,cat,bird,-10.8573,-5.77559,5.08166,10.8573,0.999819
+far,mushroom,3502,frog,deer,-10.7966,-5.77559,5.02105,10.7966,0.999892
+far,chair,4259,airplane,cat,-10.6442,-5.77559,4.86856,10.6442,0.999784
+far,wardrobe,6390,truck,cat,-10.4315,-5.77559,4.65588,10.4315,0.999443
